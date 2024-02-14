@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f3f3f3;
+        }
+        h1, h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .endpoint {
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .endpoint h2 {
+            color: #007bff;
+        }
+        .endpoint h3 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .endpoint p {
+            margin-top: 5px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Spoken language API Documentation</h1>
+   
+    <div class="endpoint">
+        <h2>Endpoint 1: /languages-infos</h2>
+        <p>This endpoint retrieves the total number of person speaking a language as a first and second language and total number of person speaking it in millions.</p>
+        <h3>GET</h3>
+        <p>Retrieve the id, language, the l1, l2 and total number of speakers for all languages</p>
+    </div>
+    
+    <div class="endpoint">
+        <h2>Endpoint 2: /languages-infos/?include_details={include_details}</h2>
+        <p>This endpoint include details about the languages, their families and branches when the parameter include_details is 1 (by default it's 0)</p>
+        <h3>GET</h3>
+        <p>Retrieve the id, language, family and branch for all the languagesc</p>
+    </div>
+    
+    <div class="endpoint">
+        <h2>Endpoint 3: /languages-infos/{info_id}</h2>
+        <p>This endpoint retrieves all the information about a specific language thanks to the info_id.</p>
+        <h3>GET</h3>
+        <p>Retrieve all information about language</p>
+    </div>
+    
+    <div class="endpoint">
+        <h2>Endpoint 4: /languages-audios</h2>
+        <p>This endpoint retrieves all the audio links available.</p>
+        <h3>GET</h3>
+        <p>Retrieve links and languages name </p>
+        <h3>REMARKS</h3>
+        <p>To listen to the audio file, you can click on the link, download it and listen to it</p>
+    </div>
+    
+    <div class="endpoint">
+        <h2>Endpoint 5: /languages-audios?language_code={language_code}</h2>
+        <p>This endpoint retrieves a list of audio files for a specific language according to the language_code.</p>
+        <h3>GET</h3>
+        <p>Retrieve language name and list of audio files</p>
+        <h3>REMARKS</h3>
+        <p>To listen to the audio file, you can click on the link, download it and listen to it</p>
+        <p>The only language you can request are English (en), German (de) and Spanish (es)</p>
+    </div>
+    
+    <!-- Add more endpoints as needed -->
+
+</body>
+</html>
+
